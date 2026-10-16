@@ -59,3 +59,7 @@ web-quality-lab/
 
 Concluído — 7 casos de teste executados e 2 comportamentos documentados para investigação.
 
+## Autor
+
+Projeto desenvolvido para estudo e prática de Quality Assurance (QA), com foco em oportunidades de QA Júnior.
+

@@ -1,6 +1,6 @@
 # Relatório de Defeitos — Web Quality Lab
 
-## BUG-001 — Login: a mensagem Login successful! aparece até com dados inválidos, mas não ocorre redirecionamento.
+## BUG-001 — Mensagem de sucesso exibida com e-mail inválido, sem confirmação de autenticação.
 
 **Resumo:** A tela de login exibe a mensagem `Login successful!` independentemente dos dados informados nos campos de e-mail e senha.
 
@@ -14,7 +14,7 @@
 3. Clicar no botão de login em cada tentativa.
 4. Observar a mensagem apresentada e o comportamento da tela.
 
-**Resultado esperado:** A aplicação deve validar os dados de autenticação e não apresentar uma mensagem de sucesso quando as credenciais forem inválidas.
+**Resultado esperado:** A aplicação deve validar o formato do e-mail e não apresentar uma mensagem que indique sucesso no login quando o e-mail estiver em formato inválido. Para confirmar a autenticação, é necessário verificar o comportamento definido para as credenciais utilizadas.
 
 **Resultado obtido:** Segundo os testes executados, a aplicação exibe `Login successful!` independentemente dos dados informados. Não ocorre redirecionamento nem abertura de uma área interna.
 
@@ -24,15 +24,16 @@
 
 **Prioridade:** A definir conforme o impacto confirmado.
 
-**Status:** Em investigação.
+**Status:** Comportamento suspeito — requer confirmação dos requisitos.
 
+**Observação:** Foi confirmada a exibição da mensagem de sucesso com um e-mail em formato inválido. Não foi possível confirmar se a autenticação foi realizada. O registro se limita ao comportamento observado na interface.
 
 **Evidência:**
 ![BUG-001 — Mensagem de sucesso no login](../evidencias/BUG-001-login-sucesso.png)
 
 **Observação:** Não foi possível confirmar se a autenticação é realmente realizada. O defeito observado, até o momento, é o comportamento da mensagem de sucesso. A lógica interna de autenticação não foi verificada.
 
-## BUG-002 — Formulário de contato: aparece Submitted! (Bug: no validation) mesmo com os campos vazios ou parcialmente preenchidos.
+## BUG-002 — Mensagem de envio exibida com campos vazios ou parcialmente preenchidos
 
 **Resumo:** O formulário de contato exibe a mensagem `Submitted! (Bug: no validation)` independentemente do preenchimento dos campos.
 
@@ -52,9 +53,9 @@
 4. Observar a mensagem apresentada.
 5. Repetir o procedimento com os outros dois cenários.
 
-**Resultado esperado:** Se os campos forem obrigatórios, a aplicação deve impedir o envio quando estiverem vazios ou incompletos e informar quais campos precisam ser corrigidos. Quando os dados forem válidos, deve apresentar uma confirmação de envio apropriada.
+**Resultado esperado:** Caso existam campos obrigatórios, a aplicação deve impedir o envio quando eles estiverem vazios ou incompletos e informar ao usuário o que precisa ser corrigido. Com os campos preenchidos corretamente, deve apresentar uma confirmação compatível com o resultado do envio.
 
-**Resultado obtido:** Nos três cenários, a aplicação exibiu a mesma mensagem: `Submitted! (Bug: no validation)`.
+**Resultado obtido:** Nos três cenários executados — todos os campos vazios (CT-005), preenchimento parcial (CT-006) e todos os campos preenchidos (CT-007) — a aplicação exibiu a mesma mensagem: `Submitted! (Bug: no validation)`.
 
 **Impacto potencial:** O formulário pode aceitar tentativas de envio com dados obrigatórios ausentes e não diferenciar entradas completas de incompletas.
 
@@ -63,6 +64,8 @@
 **Prioridade:** A definir.
 
 **Status:** Comportamento reproduzido — validação em investigação.
+
+**Observação:** A mensagem foi exibida mesmo quando os campos estavam vazios ou parcialmente preenchidos. É necessário confirmar quais campos são obrigatórios e o comportamento esperado segundo os requisitos da aplicação. Não foi verificado se os dados foram efetivamente enviados ou armazenados.
 
 **Evidência:** 
 ![BUG-002 - Mensagem do formulario de contato](../evidencias/BUG-002-formulario-sem-validacao.png)

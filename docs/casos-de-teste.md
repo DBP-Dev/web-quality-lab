@@ -5,7 +5,7 @@
 **Projeto:** Web Quality Lab  
 **Tipo de teste:** Testes funcionais manuais  
 **Aplicação testada:** https://qaengineerwaqas.com/qa-practice  
-**Status:** Em andamento
+**Status:** Concluido
 
 ## 2. Módulo: Login
 
@@ -24,7 +24,7 @@
 2. Clicar no botão de login.
 3. Observar a resposta da aplicação.
 
-**Resultado esperado:** Resultado esperado: Como a aplicação não disponibiliza credenciais oficiais de teste, não é possível confirmar a autenticação esperada. A mensagem de sucesso deve corresponder a uma autenticação efetivamente realizada.
+**Resultado esperado:** Como a aplicação não disponibiliza credenciais oficiais de teste, não é possível confirmar a autenticação esperada. A mensagem de sucesso deve corresponder a uma autenticação efetivamente realizada.
 
 **Resultado obtido:** A aplicação exibiu `Login successful!`.
 

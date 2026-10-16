@@ -1,6 +1,6 @@
 # Relatório de Defeitos — Web Quality Lab
 
-## BUG-001 — Mensagem de sucesso exibida independentemente das credenciais
+## BUG-001 — Login: a mensagem Login successful! aparece até com dados inválidos, mas não ocorre redirecionamento.
 
 **Resumo:** A tela de login exibe a mensagem `Login successful!` independentemente dos dados informados nos campos de e-mail e senha.
 
@@ -26,11 +26,13 @@
 
 **Status:** Em investigação.
 
-**Evidência:** Registrar capturas de tela mostrando os dados utilizados e a mensagem exibida.
+
+**Evidência:**
+![BUG-001 — Mensagem de sucesso no login](../evidencias/BUG-001-login-sucesso.png)
 
 **Observação:** Não foi possível confirmar se a autenticação é realmente realizada. O defeito observado, até o momento, é o comportamento da mensagem de sucesso. A lógica interna de autenticação não foi verificada.
 
-## BUG-002 — Formulário de contato exibe mensagem de envio sem validar os campos
+## BUG-002 — Formulário de contato: aparece Submitted! (Bug: no validation) mesmo com os campos vazios ou parcialmente preenchidos.
 
 **Resumo:** O formulário de contato exibe a mensagem `Submitted! (Bug: no validation)` independentemente do preenchimento dos campos.
 
@@ -39,9 +41,9 @@
 **Pré-condição:** Estar na seção do formulário de contato.
 
 **Cenários executados:**
-- **CT-006:** Envio com todos os campos vazios.
-- **CT-007:** Envio preenchendo somente os campos de nome e mensagem.
-- **CT-008:** Envio com todos os campos preenchidos com dados fictícios em formato válido.
+- **CT-005:** Envio com todos os campos vazios.
+- **CT-006:** Envio preenchendo somente os campos de nome e mensagem.
+- **CT-007:** Envio com todos os campos preenchidos com dados fictícios em formato válido.
 
 **Passos para reproduzir:**
 1. Acessar o formulário de contato.
@@ -62,6 +64,7 @@
 
 **Status:** Comportamento reproduzido — validação em investigação.
 
-**Evidência:** Registrar capturas de tela da mensagem apresentada em cada cenário.
+**Evidência:** 
+![BUG-002 - Mensagem do formulario de contato](../evidencias/BUG-002-formulario-sem-validacao.png)
 
 **Observação:** A mensagem sugere ausência de validação, mas não comprova que os dados foram efetivamente enviados ou armazenados. Essa parte não foi verificada.

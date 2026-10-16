@@ -18,7 +18,7 @@ O projeto tem como objetivo praticar técnicas de teste de software, documentar 
 ### 3.1. Funcionalidades incluídas
 
 **Login**
-- Verificar o comportamento com os campos preenchidos.
+- Verificar o comportamento do login com credenciais fictícias em formato válido.
 - Verificar a validação com o campo de e-mail vazio.
 - Verificar a validação com o campo de senha vazio.
 - Testar e-mails em formatos inválidos.
@@ -106,8 +106,12 @@ Essas observações não comprovam, por si só, que houve autenticação ou envi
 - `README.md` — apresentação geral do projeto.
 - `docs/casos-de-teste.md` — cenários executados e resultados observados.
 - `docs/relatorio-de-defeitos.md` — documentação dos comportamentos suspeitos identificados.
+- `evidencias/` — capturas de tela utilizadas como evidências dos comportamentos observados.
 
 ## 11. Status atual
 
-**Fase:** Execução manual e documentação dos testes.  
-**Próxima etapa:** Revisar os documentos, organizar as evidências e preparar o projeto para apresentação no portfólio de QA Júnior.
+**Fase:** Documentação da etapa de testes manuais concluída.
+
+**Resultado:** 7 casos de teste executados e 2 comportamentos documentados para investigação.
+
+**Próxima etapa:** Revisar a apresentação do projeto no GitHub e utilizar os resultados como parte do portfólio de QA Júnior.

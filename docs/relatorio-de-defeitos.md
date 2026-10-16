@@ -31,7 +31,7 @@
 **Evidência:**
 ![BUG-001 — Mensagem de sucesso no login](../evidencias/BUG-001-login-sucesso.png)
 
-**Observação:** Não foi possível confirmar se a autenticação é realmente realizada. O defeito observado, até o momento, é o comportamento da mensagem de sucesso. A lógica interna de autenticação não foi verificada.
+**Observação:** A autenticação real não foi confirmada. O registro documenta apenas a mensagem exibida e o comportamento observado na interface.
 
 ## BUG-002 — Mensagem de envio exibida com campos vazios ou parcialmente preenchidos
 
@@ -65,9 +65,8 @@
 
 **Status:** Comportamento reproduzido — validação em investigação.
 
-**Observação:** A mensagem foi exibida mesmo quando os campos estavam vazios ou parcialmente preenchidos. É necessário confirmar quais campos são obrigatórios e o comportamento esperado segundo os requisitos da aplicação. Não foi verificado se os dados foram efetivamente enviados ou armazenados.
+**Observação:** A mensagem sugere ausência de validação, mas não comprova que os dados foram efetivamente enviados ou armazenados. Essa parte não foi verificada.
 
 **Evidência:** 
 ![BUG-002 - Mensagem do formulario de contato](../evidencias/BUG-002-formulario-sem-validacao.png)
 
-**Observação:** A mensagem sugere ausência de validação, mas não comprova que os dados foram efetivamente enviados ou armazenados. Essa parte não foi verificada.

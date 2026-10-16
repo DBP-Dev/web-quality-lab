@@ -32,7 +32,7 @@ Foram explorados os seguintes cenários:
 Os comportamentos foram registrados com base nas observações dos testes. Não foi confirmado se houve autenticação real ou envio efetivo de dados.
 
 ## Estrutura do projeto
-
+```text
 web-quality-lab/
 ├── README.md
 ├── docs/
@@ -45,6 +45,8 @@ web-quality-lab/
     ├── CT-001-Login-com-campos-preenchidos.png
     ├── CT-002-Login-com-email-vazio.png
     └── CT-004-Login-com-email-em-formato-invalido.png
+```
+
 
 ## Documentação
 
@@ -56,8 +58,4 @@ web-quality-lab/
 ## Status do projeto
 
 Concluído — 7 casos de teste executados e 2 comportamentos documentados para investigação.
-
-## Autor
-
-Projeto desenvolvido para estudo e prática de Quality Assurance (QA), com foco em oportunidades de QA Júnior.## Status do projeto
 
